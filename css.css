@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+
+body{
+	margin:0px;
+	padding:0px;
+	background-color:white;	
+	font-family:'Poppins', sans-serif;
+
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	padding:30px 40px;
+	position:relative;
+	width:100%;
+	height: 160vh;
+	box-sizing: border-box;
+	background-size: auto;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-image: url(../images/header-img.jpg);
+	background-color: #292929;
+
+}
+
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family:'Roboto Slab', serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:94%;
+	box-sizing: content-box;
+	padding: 10px 40px;
+	background-color: #23282d;
+	box-shadow:2px 2px 15px rgba(0,0,0,0.05); 
+	z-index: 1;
+}
+
+.menu{
+	display: flex;
+}
+
+.menu li a{
+	padding: 10px 25px;
+	color:white;
+	font-size: 12px;
+		
+}
+.logo{
+	font-size: 25px;
+	font-weight: bold;
+	color:white;
+	font-family:'Roboto Slab', serif;
+}
+.toggle{
+	display: none;
+}
+
+.menu li a:hover{
+	background-color:white;
+	color: black;
+	font-weight: bold;
+	transition: all ease 0.4s;
+}
+.name{
+	font-family: "Roboto Slab", serif;
+	width: 700px;
+	position: absolute;
+	left: 15%;
+	top: 30%;
+	transform: translate(-20%,-50%);
+}
+.name p:nth-child(1),.name .details{
+	color:#F8F9FA;
+	font-size: 35px;
+	margin: 20px, 0px, 30px;
+}
+.name h1{
+	font-family: "Roboto Slab", serif;
+	font-size: 57px;
+	margin: 20px, 0px;
+	letter-spacing: 0px;
+	color:#F8F9FA;
+}
+#button1{
+	width:150px;
+	height: 45px;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	background-color: #292929;
+	color:#FFFFFF;
+}
+#button2{
+	width:150px;
+	height: 45px;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	background-color: #292929;
+	color:#FFFFFF;
+}
+
+
+#button1, #button2:hover{
+	background-color: #131313;
+	transition: all ease 0.5s;
+}
+  
+
+  @media(max-width:900px){
+	.toggle{
+			display:block;
+		}
+		.toggle:before{
+	content:'\f0c9';
+	font-family: fontAwesome;
+	line-height: 0px;
+			margin-left:-30px;
+}
+		.toggle.active:before{
+	content:'\f00d' ;
+	
+		}
+	nav{
+		padding:10px 30px;
+	}
+	
+	nav ul{
+		position:absolute;	
+		width: 100%;
+		height:auto;
+		box-sizing:border-box;
+		background-color:#0F0F0F;
+		top: 50px;
+		left: 0;
+		transition: 0.5s;
+		overflow: hidden;
+		display: none ;
+		border:3px solid #1F1F1F;
+	}
+	
+		nav ul li a{
+		border-bottom: 1px solid rgba(255,255,255,0.10) ;
+		color:white ;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px ;
+		padding: 0px ;
+	}
+		nav ul{
+			padding:0px;
+			margin:0px;
+		}
+
+		.active-menu {
+		display: block ;
+	}
+	
+		nav ul li a:hover{
+			background-color:rgba(27,29,32,0.15);
+
+		}
+	}
